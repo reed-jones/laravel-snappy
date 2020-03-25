@@ -5,17 +5,17 @@ use Illuminate\Filesystem\Filesystem;
 
 class IlluminateSnappyImage extends Image {
 
-	/**
-	 * @param \Illuminate\Filesystem\Filesystem
+    /**
+     * @param \Illuminate\Filesystem\Filesystem
      * @param string $binary
      * @param array $options
-	 */
-	public function __construct(Filesystem $fs, $binary, array $options, array $env)
-	{
-		parent::__construct($binary, $options, $env);
+     */
+    public function __construct(Filesystem $fs, $binary, array $options, array $env)
+    {
+        parent::__construct($binary, $options, $env);
 
-		$this->fs = $fs;
-	}
+        $this->fs = $fs;
+    }
 
     /**
      * Wrapper for the "file_get_contents" function
